@@ -1,10 +1,115 @@
-commit 311e71da4554d7e324dfc00e9f61339b8d827ee5
+commit 508f5a22e0c6c0f0a72fa0e3a9bb5dc9b19c30c0
 Author: ramirami <ratilmii@gmail.com>
-Date:   Tue Mar 20 23:08:09 2018 +0200
+Date:   Tue Mar 20 23:06:18 2018 +0200
 
-    initial commit
+    poisto ja nimenvaihto
 
- README.md | 0
+ tiedostoja/file1  | 0
+ tiedostoja/file2  | 0
+ tiedostoja/file22 | 0
+ tiedostoja/file3  | 1 +
+ 4 files changed, 1 insertion(+)
+
+commit 3bfc99ffbe960b1e1f6a96cd830818f42559cc2c
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 23:03:29 2018 +0200
+
+    tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d5ed622dcb2f4b6bcb7fbcc4bdfda73017182838
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:57:59 2018 +0200
+
+    muutoksia
+
+ eka.txt    | 4 +++-
+ kolmas.txt | 3 ++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+commit 38135fe91d8ccf1626f0f8770ca36e6ee1ad679e
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:56:15 2018 +0200
+
+    nimettiin tiedosto.txt eka.txt
+
+ tiedosto.txt | 6 ------
+ 1 file changed, 6 deletions(-)
+
+commit 90c26662d50f322835738ce0039f2e6277e749d8
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:55:52 2018 +0200
+
+    nimettiin tiedosto.txt eka.txt
+
+ eka.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 2a4cb9647749a7b0d626d58a93d39c4b7f47eb4d
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:54:16 2018 +0200
+
+    poistettiin toinen.txt
+
+ toinen.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit f3c1418824ae6aace6cc53da499b0a165f530c94
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:51:50 2018 +0200
+
+    poistettiin osa lipsumista
+
+ tiedosto.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 414a253065ea910ed32388177401b93fcbd54387
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:50:57 2018 +0200
+
+    kopioitiin lorem ipsum
+
+ tiedosto.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 4d6c56899a2a0d1a7cf1519d7f40604ff2f58fd5
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:45:23 2018 +0200
+
+    muokattu kolmas.txt
+
+ kolmas.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit e6a595407f52bec014fdf20299250e2e45afa345
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:43:56 2018 +0200
+
+    luotu kolmas.txt, muutettu toinen.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 2 ++
+ 2 files changed, 3 insertions(+)
+
+commit 76371b8720fe5dbcc256e051c22030ad0dccbde0
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:41:02 2018 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit d8f723ce7ae573d5c0ab6cc83b9e13231f07a717
+Author: ramirami <ratilmii@gmail.com>
+Date:   Tue Mar 20 22:38:23 2018 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
-
-muutos
