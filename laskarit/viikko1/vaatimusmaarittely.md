@@ -1,21 +1,21 @@
-**Vaatimusmäärittely**
+# Vaatimusmäärittely
 
-_Sovelluksen tarkoitus_
+## Sovelluksen tarkoitus
 
 Sovelluksen tarkoituksena on antaa opiskelijalle mahdollisuus pitää 
 kirjaa opinnoistaan, luoda lukujärjestyksiä ja seurata etenemistään 
-valitsemassaan tutkinnosta, tehdä muistiinpanoja sekä asettaa hälytyksiä 
+valitsemassaan tutkinnossa, tehdä muistiinpanoja sekä asettaa hälytyksiä 
 määräajoille.
 
-_Käyttäjät_
+### Käyttäjät
 
 Sovelluksella on ainoastaan yksi käyttäjä, opiskelija itse. Sovellukseen 
 saatetaan myöhemmässä vaiheessa luoda mahdollisuus käyttäjätunnuksen 
 luomiseen.
 
-_Alustavia toiminnallisuuksia_
+### Alustavia toiminnallisuuksia
 
--Lukujärjestyksen luominen
--tutkintorakenteiden selaaminen ja tutkinnon valitseminen
--muistilappujen luominen
--hälytysten asettaminen
+- Lukujärjestyksen luominen
+- tutkintorakenteiden selaaminen ja tutkinnon valitseminen
+- muistilappujen luominen
+- hälytysten asettaminen
