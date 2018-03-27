@@ -7,8 +7,8 @@ ja muuhun vastaavaan opiskelijan arkea helpottamiseen.
 
 ### Dokumentaatio
 
-[Vaatimusmäärittely](https://github.com/ratilmii/otm-harjoitustyo/blob/master/dokumentaatio
-/vaatimusmaarittely.md)
+[Vaatimusmäärittely](https://github.com/ratilmii/otm-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
 ---
 
 **Aiempien tehtävien vaatimia lisäyksiä**
