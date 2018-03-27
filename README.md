@@ -3,7 +3,7 @@
 ## Opintovahti
 
 Sovellus opintojen edistymisen seuraamiseen, lukujärjestyksien luomiseen 
-ja muuhun vastaavaan opiskelijan arkea helpottamiseen.
+ja muuhun vastaavaan opiskelijan arkea helpottavaan toiminnallisuuteen.
 
 ### Dokumentaatio
 
