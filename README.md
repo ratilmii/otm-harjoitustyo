@@ -1,6 +1,14 @@
-**OTM-harjoitustyö**
+# OTM-harjoitustyö
 
-**Tehtävät**
+## Opintovahti
+
+Sovellus opintojen edistymisen seuraamiseen, lukujärjestyksien luomiseen 
+ja muuhun vastaavaan opiskelijan arkea helpottamiseen.
+
+### Dokumentaatio
+
+
+**Aiempien tehtävien vaatimia lisäyksiä**
 
 Viikko1
 
@@ -8,4 +16,4 @@ Viikko1
 
 [gitlog.txt](https://github.com/ratilmii/otm-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
-muutos
+
