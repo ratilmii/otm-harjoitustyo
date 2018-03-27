@@ -5,28 +5,121 @@
  */
 package com.mycompany.unicafe;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  *
  * @author ramirami
  */
-public class KassapaateTest extends TestCase {
+public class KassapaateTest {
     
-    public KassapaateTest(String testName) {
-        super(testName);
+    Kassapaate unicafeExactum;
+    Maksukortti kortti;
+    
+    @Before
+    public void setup() {
+        unicafeExactum = new Kassapaate();
     }
     
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+    @Test
+    public void luotuKassapaateOlemassa(){
+        assertTrue(unicafeExactum!=null);
     }
     
-    @Override
-    protected void tearDown() throws Exception {
-        super.tearDown();
+    @Test
+    public void KassassaRahaaAlussaOikein() {
+        assertEquals(100000, unicafeExactum.kassassaRahaa());
     }
-
-    // TODO add test methods here. The name must begin with 'test'. For example:
-    // public void testHello() {}
+    
+    @Test
+    public void myytyjaAnnoksiaAlussa() {
+        assertEquals(0, unicafeExactum.edullisiaLounaitaMyyty());
+        assertEquals(0, unicafeExactum.maukkaitaLounaitaMyyty());
+    }
+    
+    @Test
+    public void edullinenKateismaksuOnnistui() {
+        int maksu = 300;
+        int vaihtoraha = unicafeExactum.syoEdullisesti(maksu);
+        assertEquals(100240, unicafeExactum.kassassaRahaa());
+        assertEquals(60, vaihtoraha);
+        assertEquals(1, unicafeExactum.edullisiaLounaitaMyyty());
+    }
+    
+    @Test
+    public void edullinenKateismaksuEpaonnistui() {
+        int maksu = 200;
+        int vaihtoraha = unicafeExactum.syoEdullisesti(maksu);
+        assertEquals(100000, unicafeExactum.kassassaRahaa());
+        assertEquals(200, vaihtoraha);
+        assertEquals(0, unicafeExactum.edullisiaLounaitaMyyty());
+    }
+    
+    @Test
+    public void maukasKateismaksuOnnistui() {
+        int maksu = 450;
+        int vaihtoraha = unicafeExactum.syoMaukkaasti(maksu);
+        assertEquals(100400, unicafeExactum.kassassaRahaa());
+        assertEquals(50, vaihtoraha);
+        assertEquals(1, unicafeExactum.maukkaitaLounaitaMyyty());
+    }
+    
+    @Test
+    public void maukasKateismaksuEpaonnistui() {
+        int maksu = 200;
+        int vaihtoraha = unicafeExactum.syoMaukkaasti(maksu);
+        assertEquals(100000, unicafeExactum.kassassaRahaa());
+        assertEquals(200, vaihtoraha);
+        assertEquals(0, unicafeExactum.maukkaitaLounaitaMyyty());
+    }
+    
+    @Test 
+    public void edullinenKorttimaksuOnnistui() {
+        kortti = new Maksukortti(500);
+        unicafeExactum.syoEdullisesti(kortti);
+        assertEquals(1, unicafeExactum.edullisiaLounaitaMyyty());
+        assertEquals(260, kortti.saldo());
+    }
+    
+    @Test 
+    public void edullinenKorttimaksuEpaonnistui() {
+        kortti = new Maksukortti(100);
+        unicafeExactum.syoEdullisesti(kortti);
+        assertEquals(0, unicafeExactum.edullisiaLounaitaMyyty());
+        assertEquals(100, kortti.saldo());
+    }
+    
+    @Test 
+    public void maukasKorttimaksuOnnistui() {
+        kortti = new Maksukortti(500);
+        unicafeExactum.syoMaukkaasti(kortti);
+        assertEquals(1, unicafeExactum.maukkaitaLounaitaMyyty());
+        assertEquals(100, kortti.saldo());
+    }
+    
+    @Test 
+    public void maukasKorttimaksuEpaonnistui() {
+        kortti = new Maksukortti(100);
+        unicafeExactum.syoMaukkaasti(kortti);
+        assertEquals(0, unicafeExactum.edullisiaLounaitaMyyty());
+        assertEquals(100, kortti.saldo());
+    }
+    
+    @Test
+    public void kortilleRahanLataaminenOnnistui() {
+        kortti = new Maksukortti(0);
+        unicafeExactum.lataaRahaaKortille(kortti, 500);
+        assertEquals(500, kortti.saldo());
+        assertEquals(100500, unicafeExactum.kassassaRahaa());
+    }
+    
+    @Test
+    public void kortilleRahanLataaminenEpaonnistui() {
+        kortti = new Maksukortti(0);
+        unicafeExactum.lataaRahaaKortille(kortti, -50);
+        assertEquals(0, kortti.saldo());
+        assertEquals(100000, unicafeExactum.kassassaRahaa());
+    }
 }
