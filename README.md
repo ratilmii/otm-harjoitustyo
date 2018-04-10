@@ -9,6 +9,8 @@ ja muuhun vastaavaan opiskelijan arkea helpottavaan toiminnallisuuteen.
 
 [Vaatimusmäärittely](https://github.com/ratilmii/otm-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
+[Työaikakirjanpito](https://github.com/ratilmii/otm-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
 ---
 
 **Aiempien tehtävien vaatimia lisäyksiä**
