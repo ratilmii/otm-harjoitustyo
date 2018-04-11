@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="285.0" prefWidth="320" style="-fx-border-color: black; -fx-border-insets: 10px; -fx-background-color: gray;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="opintovahti.FXMLDocumentController">
+    <children>
+        <Button fx:id="button2" layoutX="109.0" layoutY="206.0" onAction="#handleButtonAction2" text="Uusi käyttäjä" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TextField layoutX="76.0" layoutY="68.0" promptText="Käyttäjätunnus" />
+      <PasswordField layoutX="76.0" layoutY="111.0" promptText="Salasana" />
+      <Button fx:id="button" layoutX="108.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="104.0" text="Kirjaudu" />
+      <Text layoutX="94.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opintovahti" textAlignment="CENTER">
+         <font>
+            <Font name="Loma" size="26.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
