@@ -1,3 +1,9 @@
-.button {
-    -fx-font-weight: bold;
+.jfx-button {
+    -fx-background-color: #6accc9;
 }
+
+.jfx-text-field, .jfx-password-field {
+    -fx-prompt-text-fill: GRAY;
+    -fx-text-fill: WHITE;
+}
+
