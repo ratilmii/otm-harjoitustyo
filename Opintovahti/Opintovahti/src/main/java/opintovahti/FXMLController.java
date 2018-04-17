@@ -26,11 +26,11 @@ public class FXMLController implements Initializable {
     @FXML
     private Pane pane;
     
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+//    @FXML
+//    private void handleButtonAction(ActionEvent event) {
+//        System.out.println("You clicked me!");
+//        label.setText("Hello World!");
+//    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -64,9 +64,7 @@ public class FXMLController implements Initializable {
                 stage.setY(event.getScreenY() - yOffset);
             }
         });
-        
-        scene.getStylesheets().add("/styles/Styles.css");
-        
+                
     }
     
     
