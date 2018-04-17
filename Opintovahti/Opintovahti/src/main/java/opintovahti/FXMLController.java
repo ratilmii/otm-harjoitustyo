@@ -2,6 +2,7 @@ package opintovahti;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -66,6 +67,10 @@ public class FXMLController implements Initializable {
         });
                 
     }
-    
+   
+    @FXML
+    public void closeWindow() {
+        Platform.exit();
+    }
     
 }
