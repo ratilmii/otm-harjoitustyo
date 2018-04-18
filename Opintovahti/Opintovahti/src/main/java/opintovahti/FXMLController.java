@@ -42,10 +42,10 @@ public class FXMLController implements Initializable {
     public void newUserCreated(ActionEvent event) throws Exception {
 
         Parent scene_parent = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
-        Scene scene = new Scene(scene_parent);
+        Scene sceneGUI = new Scene(scene_parent);
         final Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.hide();
-        stage.setScene(scene);
+        stage.setScene(sceneGUI);
         stage.show();
         
             
@@ -65,6 +65,8 @@ public class FXMLController implements Initializable {
                 stage.setY(event.getScreenY() - yOffset);
             }
         });
+        
+        sceneGUI.getStylesheets().add("/styles/Styles.css");
                 
     }
    
@@ -72,5 +74,6 @@ public class FXMLController implements Initializable {
     public void closeWindow() {
         Platform.exit();
     }
+    
     
 }

@@ -1,70 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #245569;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opintovahti.FXMLController">
-   <top>
-      <MenuBar prefHeight="36.0" prefWidth="745.0" style="-fx-background-color: #2a657c;" BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" onAction="#closeWindow" text="Tiedosto">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Sulje" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Muokkaa" />
-          <Menu mnemonicParsing="false" text="Ohje">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
-         <padding>
-            <Insets left="6.0" top="6.0" />
-         </padding>
-      </MenuBar>
-   </top>
    <center>
-      <HBox BorderPane.alignment="CENTER">
+      <HBox prefHeight="450.0" prefWidth="407.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView editable="true" prefWidth="598.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="Klo" />
-                <TableColumn prefWidth="75.0" text="Maanantai" />
-                  <TableColumn prefWidth="75.0" text="Tiistai" />
-                  <TableColumn prefWidth="75.0" text="Keskiviikko" />
-                  <TableColumn prefWidth="75.0" text="Torstai" />
-                  <TableColumn prefWidth="75.0" text="Perjantai" />
-              </columns>
-               <columnResizePolicy>
-                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy>
-            </TableView>
+            <HBox prefHeight="450.0" prefWidth="593.0">
+               <children>
+                  <HBox>
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="20.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <GridPane alignment="CENTER" prefHeight="450.0" prefWidth="704.0" style="-fx-background-color: white;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextArea layoutX="101.0" layoutY="140.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea layoutX="101.0" layoutY="204.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextArea layoutX="101.0" layoutY="268.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="1">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maanantai">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </center>
+                        </BorderPane>
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="2">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tiistai">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </center>
+                        </BorderPane>
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="3">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Keskiviikko">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </center>
+                        </BorderPane>
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="4">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Torstai">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </center>
+                        </BorderPane>
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="5">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Perjantai">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </center>
+                        </BorderPane>
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.rowIndex="1">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8:15 - 10:00" textAlignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.rowIndex="2">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10:15 - 12:00" />
+                           </center>
+                        </BorderPane>
+                        <BorderPane GridPane.rowIndex="3">
+                           <center>
+                              <BorderPane BorderPane.alignment="CENTER">
+                                 <center>
+                                    <BorderPane style="-fx-background-color: #dff0e8;">
+                                       <center>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12:15 - 14:00" />
+                                       </center>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </center>
+                        </BorderPane>
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.rowIndex="4">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="14:15 -16:00" />
+                           </center>
+                        </BorderPane>
+                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.rowIndex="5">
+                           <center>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="16:15 - 18:00" />
+                           </center>
+                        </BorderPane>
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXToggleButton size="8.0" text="Päivä/viikko" textAlignment="CENTER" wrapText="true" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
          </children>
       </HBox>
    </center>
-   <left>
-      <HBox prefHeight="464.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
-   </left>
    <right>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox BorderPane.alignment="CENTER">
          <children>
-            <JFXTextArea prefHeight="290.0" prefWidth="200.0" />
+            <VBox prefHeight="450.0" prefWidth="184.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Muistiinpanoja:" textAlignment="CENTER" wrappingWidth="164.830078125">
+                     <VBox.margin>
+                        <Insets bottom="5.0" right="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Helvetica Neue" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextArea opacity="0.52" prefHeight="443.0" prefWidth="185.0" style="-fx-font-size: 14;" wrapText="true">
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TextArea>
+                  <VBox>
+                     <VBox.margin>
+                        <Insets right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox>
+                           <children>
+                              <BorderPane>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </BorderPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
          </children>
       </HBox>
    </right>
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="800.0">
+               <children>
+                  <BorderPane />
+                  <BorderPane>
+                     <center>
+                        <JFXToggleButton prefHeight="89.0" prefWidth="473.0" size="14.0" text="Paina tästä, niin kerta&#10;kaikkiaan mitään ei tapahdu" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </center>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </children></HBox>
    </bottom>
+   <top>
+      <VBox prefHeight="50.0" prefWidth="804.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="407.0">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <MenuBar prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #3487a9;">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="Tiedosto">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Tallenna" />
+                                    <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Sulje" />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Muokkaa">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Asetukset" />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Ohje">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Tietoa" />
+                              </items>
+                            </Menu>
+                          </menus>
+                           <padding>
+                              <Insets top="3.0" />
+                           </padding>
+                        </MenuBar>
+                     </children>
+                  </HBox>
+                  <JFXButton prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #3487a9;" text="tänne vielä buttonit">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
 </BorderPane>

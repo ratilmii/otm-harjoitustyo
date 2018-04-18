@@ -26,7 +26,7 @@
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton layoutX="80.0" layoutY="268.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: 6accc9;" text="Kirjaudu sisään">
+      <JFXButton disable="true" layoutX="80.0" layoutY="268.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: 6accc9;" text="Kirjaudu sisään">
          <font>
             <Font size="18.0" />
          </font>

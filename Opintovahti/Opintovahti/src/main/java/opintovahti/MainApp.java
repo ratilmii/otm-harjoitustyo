@@ -18,11 +18,11 @@ public class MainApp extends Application {
     
     @Override
     public void start(final Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
+        Parent login_parent = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
         
         primaryStage.initStyle(StageStyle.UNDECORATED);
         
-        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+        login_parent.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 xOffset = event.getSceneX();
@@ -30,7 +30,7 @@ public class MainApp extends Application {
             }
         });
         
-        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+        login_parent.setOnMouseDragged(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 primaryStage.setX(event.getScreenX() - xOffset);
@@ -38,7 +38,7 @@ public class MainApp extends Application {
             }
         });
         
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(login_parent);
         scene.getStylesheets().add("/styles/Styles.css");
         
         primaryStage.setTitle("Opintovahti");
