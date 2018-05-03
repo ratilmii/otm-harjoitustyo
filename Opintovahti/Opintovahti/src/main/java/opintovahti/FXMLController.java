@@ -45,11 +45,11 @@ public class FXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
  
     }
-    
+
     @FXML
     public void newUserCreated(ActionEvent event) throws Exception {
 
-        User user = new User(txtUsr.getText(), txtPswd.getText());
+        User user = new User(this.txtUsr.getText(), this.txtPswd.getText());
         Databases.createUser(user.getName(), user.getSalt(), user.getHash());
         
         Parent scene_parent = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));

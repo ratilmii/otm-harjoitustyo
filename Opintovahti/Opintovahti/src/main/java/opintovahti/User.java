@@ -11,15 +11,15 @@ public class User {
         this.salt = Passwords.getNextSalt();
     }
     
-    public static String getName(){
+    public String getName(){
         return username;
     }
     
-    public static byte[] getSalt(){
+    public byte[] getSalt(){
         return salt;
     }
     
-    public static byte[] getHash(){
+    public byte[] getHash(){
         char[] toBeHashed = passwordPlain.toCharArray();
         return Passwords.hash(toBeHashed, salt);
         
