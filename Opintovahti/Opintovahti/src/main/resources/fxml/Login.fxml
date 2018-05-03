@@ -16,22 +16,22 @@
             <Font name="Euphemia" size="42.0" />
          </font>
       </Text>
-      <JFXTextField focusColor="#7affe9" layoutX="78.0" layoutY="161.0" prefHeight="30.0" prefWidth="200.0" promptText="Käyttäjätunnus" unFocusColor="#837e7e">
+      <JFXTextField fx:id="txtUsr" focusColor="#7affe9" layoutX="78.0" layoutY="161.0" prefHeight="30.0" prefWidth="200.0" promptText="Käyttäjätunnus" unFocusColor="#837e7e">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField focusColor="#7affe9" layoutX="80.0" layoutY="210.0" prefHeight="30.0" prefWidth="200.0" promptText="Salasana" unFocusColor="#837e7e">
+      <JFXPasswordField fx:id="txtPswd" focusColor="#7affe9" layoutX="80.0" layoutY="210.0" prefHeight="30.0" prefWidth="200.0" promptText="Salasana" unFocusColor="#837e7e">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton disable="true" layoutX="80.0" layoutY="268.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: 6accc9;" text="Kirjaudu sisään">
+      <JFXButton fx:id="buttonLogin" disable="true" layoutX="80.0" layoutY="268.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: 6accc9;" text="Kirjaudu sisään">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="80.0" layoutY="318.0" onAction="#newUserCreated" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: 6accc9;" text="Luo tunnus">
+      <JFXButton fx:id="buttonCreateNew" layoutX="80.0" layoutY="318.0" onAction="#newUserCreated" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: 6accc9;" text="Luo tunnus">
          <font>
             <Font size="18.0" />
          </font>

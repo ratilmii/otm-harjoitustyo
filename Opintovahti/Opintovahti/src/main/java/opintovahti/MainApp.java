@@ -1,5 +1,6 @@
 package opintovahti;
 
+import java.util.Arrays;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.event.EventHandler;
@@ -47,6 +48,11 @@ public class MainApp extends Application {
         
             
         primaryStage.show();
+        
+        User user = new User("asd", "dsa");
+        System.out.println(user.getName() + user.getHashedPass() + user.getHashedPass());
+        
+        
     }
 
     /**
