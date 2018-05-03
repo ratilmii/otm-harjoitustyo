@@ -21,19 +21,20 @@ public class Databases {
         
     }
     
-    public static void createUser(String username, byte[] password) throws Exception {
+    public static void createUser(String username, byte[] salt, byte[] hash) throws Exception {
         
         
         Connection connection = DriverManager.getConnection("jdbc:sqlite:users.db");
         
-        PreparedStatement stmt = connection.prepareStatement("INSERT INTO Users (username, password) VALUES ('" + username + "', '" + password + "');");
+        PreparedStatement stmt = connection.prepareStatement("INSERT INTO Users (username, salt, hash) VALUES ('" + username + "', '" + salt + "', '" + hash + "');");
         ResultSet rs = stmt.executeQuery();
         
         while (rs.next()) {
             String usr = rs.getString("username");
-            String psd = rs.getString("password");
+            String slt = rs.getString("salt");
+            String hsh = rs.getString("hash");
 
-            System.out.println(usr + " " + psd);
+            System.out.println(usr + " " + slt + " " + hsh);
         }
         
         stmt.close();

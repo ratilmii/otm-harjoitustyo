@@ -50,7 +50,7 @@ public class FXMLController implements Initializable {
     public void newUserCreated(ActionEvent event) throws Exception {
 
         User user = new User(txtUsr.getText(), txtPswd.getText());
-        Databases.createUser(User.getName(), User.getHashedPass());
+        Databases.createUser(user.getName(), user.getSalt(), user.getHash());
         
         Parent scene_parent = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
         Scene sceneGUI = new Scene(scene_parent);

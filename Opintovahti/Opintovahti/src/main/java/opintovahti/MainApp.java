@@ -50,7 +50,10 @@ public class MainApp extends Application {
         primaryStage.show();
         
         User user = new User("asd", "dsa");
-        System.out.println(user.getName() + user.getHashedPass() + user.getHashedPass());
+        System.out.println(user.getName() + user.getSalt() + user.getSalt());
+        
+        User user2 = new User("gfd", "ytr");
+        System.out.println(user.getName() + user.getSalt() + user.getSalt());
         
         
     }
