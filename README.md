@@ -13,3 +13,4 @@ ja muuhun vastaavaan opiskelijan arkea helpottavaan toiminnallisuuteen.
 
 ---
 
+HUOM!! Koodikatselmoijalle tai kenelle tahansa joka tätä koodia katsoo tiedoksi, että valitettavasti en ole saanut vielä kirjautumistoiminnallisuutta valmiiksi, joten ohjelma on parhaillaan keskeneräinen eikä todennäköisesti toimi kunnolla.
