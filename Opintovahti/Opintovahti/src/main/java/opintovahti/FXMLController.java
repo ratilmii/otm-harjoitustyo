@@ -80,6 +80,11 @@ public class FXMLController implements Initializable {
         sceneGUI.getStylesheets().add("/styles/Styles.css");
                 
     }
+    
+    @FXML
+    public void login(ActionEvent event) throws Exception {
+        
+    }
    
     @FXML
     public void closeWindow() {

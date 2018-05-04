@@ -29,8 +29,24 @@ public class Databases {
         stmt.executeUpdate();
         
         stmt.close();
-
         connection.close();
-       
+    }
+    
+    public static boolean authenticateUser(String username, byte[] salt, byte[] hash) throws Exception {
+        
+        Connection connection = DriverManager.getConnection("jdbc:sqlite:users.db");
+        
+        PreparedStatement stmt = connection.prepareStatement("SELECT FROM User (username, salt, hash) VALUES ('" + username + "', '" + salt + "', '" + hash + "');");
+        ResultSet rs = stmt.executeQuery();
+        
+        while(rs.next()) {
+            return true;
+        }
+        
+        stmt.close();
+        connection.close();
+        
+        return false;
+
     }
 }
