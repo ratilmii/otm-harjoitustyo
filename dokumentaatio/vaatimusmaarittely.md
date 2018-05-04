@@ -2,20 +2,15 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen tarkoituksena on antaa opiskelijalle mahdollisuus pitää 
-kirjaa opinnoistaan, luoda lukujärjestyksiä ja seurata etenemistään 
-valitsemassaan tutkinnossa, tehdä muistiinpanoja sekä asettaa hälytyksiä 
-määräajoille.
+Sovelluksen tarkoituksena on antaa opiskelijalle mahdollisuus luoda itselleen lukujärjestyksiä eri opetusperiodeille ja kirjoittaa ylös muistiinpanoja. Mahdollisesti myös asettaa hälytyksiä tulevista tapahtumista.
 
 ### Käyttäjät
 
-Sovelluksella on ainoastaan yksi käyttäjä, opiskelija itse. Sovellukseen 
-saatetaan myöhemmässä vaiheessa luoda mahdollisuus käyttäjätunnuksen 
-luomiseen.
+Sovelluksella on ainoastaan yksi käyttäjä kerrallaan, opiskelija itse. Käyttäjiä voi kuitenkin olla useampia, sillä jokainen käyttäjä tekee itselleen salasanasuojatun käyttäjätunnuksen.
 
 ### Alustavia toiminnallisuuksia
 
+- Käyttäjätunnuksen luominen 
+- Kryptatyn salasanan tallentaminen tietokantaan
 - Lukujärjestyksen luominen
-- tutkintorakenteiden selaaminen ja tutkinnon valitseminen
-- muistilappujen luominen
-- hälytysten asettaminen
+- "muistilappuun" kirjoittaminen
