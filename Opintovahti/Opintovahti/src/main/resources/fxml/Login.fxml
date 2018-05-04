@@ -5,13 +5,14 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="LoginScreen" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="360.0" style="-fx-background-color: #122A34; -fx-background-color: #245569; -fx-border-color: #122A34; -fx-border-width: 8;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opintovahti.FXMLController">
     <children>
-      <Text fill="#aab886" layoutX="69.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opintovahti">
+      <Text fill="#aab886" layoutX="69.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opintovahti">
          <font>
             <Font name="Euphemia" size="42.0" />
          </font>
@@ -26,7 +27,7 @@
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton fx:id="buttonLogin" disable="true" layoutX="80.0" layoutY="268.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: 6accc9;" text="Kirjaudu sisään">
+      <JFXButton fx:id="buttonLogin" layoutX="80.0" layoutY="268.0" onAction="#login" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: 6accc9;" text="Kirjaudu sisään">
          <font>
             <Font size="18.0" />
          </font>
@@ -36,6 +37,10 @@
             <Font size="18.0" />
          </font>
       </JFXButton>
+      <Label fx:id="signupLabel" alignment="CENTER" layoutX="55.0" layoutY="103.0" prefHeight="30.0" prefWidth="250.0" textAlignment="CENTER" textFill="#ff6363">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
     </children>
    <opaqueInsets>
       <Insets />

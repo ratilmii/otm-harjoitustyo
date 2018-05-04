@@ -49,11 +49,6 @@ public class MainApp extends Application {
             
         primaryStage.show();
         
-        User user = new User("asd", "dsa");
-        User user2 = new User("gfd", "ytr");
-        System.out.println(user.getName() + user.getSalt() + user.getSalt());
-        System.out.println(user2.getName() + user2.getSalt() + user2.getSalt());
-        
 
     }
 
