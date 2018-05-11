@@ -16,4 +16,5 @@ Sovelluksen ideana oli tehdä lukujärjestyssovellus, joka toimii yhtä vaivatto
 
 [Työaikakirjanpito](https://github.com/ratilmii/otm-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
+[Release](https://github.com/ratilmii/otm-harjoitustyo/releases/tag/1.0)
 ---
