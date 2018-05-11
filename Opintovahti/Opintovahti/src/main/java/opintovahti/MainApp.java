@@ -1,6 +1,6 @@
 package opintovahti;
 
-import java.util.Arrays;
+
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.event.EventHandler;
@@ -18,12 +18,13 @@ public class MainApp extends Application {
     private double yOffset = 0;
     
     @Override
-    public void start(final Stage primaryStage) throws Exception {
-        Parent login_parent = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
+    public void start(final Stage stage) throws Exception {
         
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+        State.globalState = new State();
         
-        login_parent.setOnMousePressed(new EventHandler<MouseEvent>() {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
+        
+        root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 xOffset = event.getSceneX();
@@ -31,25 +32,24 @@ public class MainApp extends Application {
             }
         });
         
-        login_parent.setOnMouseDragged(new EventHandler<MouseEvent>() {
+        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                primaryStage.setX(event.getScreenX() - xOffset);
-                primaryStage.setY(event.getScreenY() - yOffset);
+                stage.setX(event.getScreenX() - xOffset);
+                stage.setY(event.getScreenY() - yOffset);
             }
         });
         
-        Scene scene = new Scene(login_parent);
+        Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
         
-        primaryStage.setTitle("Opintovahti");
-        primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setTitle("Opintovahti");
+        stage.setResizable(false);
         
-            
-        primaryStage.show();
+        stage.setScene(scene);               
+        stage.show();
         
-
     }
 
     /**

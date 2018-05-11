@@ -12,157 +12,132 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #245569;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opintovahti.FXMLController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #245569;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opintovahti.SceneController">
    <center>
       <HBox prefHeight="450.0" prefWidth="407.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="450.0" prefWidth="593.0">
+            <HBox alignment="CENTER" prefWidth="576.0">
                <children>
-                  <HBox>
-                     <HBox.margin>
-                        <Insets bottom="20.0" right="20.0" />
-                     </HBox.margin>
-                  </HBox>
-                  <GridPane alignment="CENTER" prefHeight="450.0" prefWidth="704.0" style="-fx-background-color: white;">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                  <VBox alignment="CENTER" prefHeight="450.0">
                      <children>
-                        <TextArea layoutX="101.0" layoutY="140.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextArea layoutX="101.0" layoutY="204.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <TextArea layoutX="101.0" layoutY="268.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="1">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maanantai">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Text>
-                           </center>
-                        </BorderPane>
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="2">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tiistai">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Text>
-                           </center>
-                        </BorderPane>
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="3">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Keskiviikko">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Text>
-                           </center>
-                        </BorderPane>
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="4">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Torstai">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Text>
-                           </center>
-                        </BorderPane>
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.columnIndex="5">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Perjantai">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Text>
-                           </center>
-                        </BorderPane>
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.rowIndex="1">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8:15 - 10:00" textAlignment="CENTER" />
-                           </center>
-                        </BorderPane>
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.rowIndex="2">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10:15 - 12:00" />
-                           </center>
-                        </BorderPane>
-                        <BorderPane GridPane.rowIndex="3">
-                           <center>
-                              <BorderPane BorderPane.alignment="CENTER">
-                                 <center>
-                                    <BorderPane style="-fx-background-color: #dff0e8;">
-                                       <center>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12:15 - 14:00" />
-                                       </center>
-                                    </BorderPane>
-                                 </center>
-                              </BorderPane>
-                           </center>
-                        </BorderPane>
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.rowIndex="4">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="14:15 -16:00" />
-                           </center>
-                        </BorderPane>
-                        <BorderPane style="-fx-background-color: #dff0e8;" GridPane.rowIndex="5">
-                           <center>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="16:15 - 18:00" />
-                           </center>
-                        </BorderPane>
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextArea prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <GridPane>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
+                        <GridPane alignment="CENTER" prefHeight="75.0" prefWidth="96.0" style="-fx-background-color: white;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
                            <children>
-                              <JFXComboBox prefHeight="40.0" prefWidth="75.0" promptText="Periodi" visibleRowCount="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXComboBox fx:id="periodi_id" onAction="#comboBoxUpdate" prefHeight="15.0" prefWidth="56.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets bottom="3.0" />
+                                 </GridPane.margin>
+                              </JFXComboBox>
+                              <Label text="Periodi:" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets top="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane alignment="CENTER" prefHeight="375.0" prefWidth="96.0" style="-fx-background-color: #cff2dc;">
+                          <columnConstraints>
+                            <ColumnConstraints />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" text="8:15 - 10:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                              <Label text="10:15 - 12:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Label text="12:15 - 14:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Label text="14:15 - 16:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Label text="16:15 - 18:00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
                            </children>
                         </GridPane>
                      </children>
-                  </GridPane>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="450.0">
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="75.0" prefWidth="480.0" style="-fx-background-color: #cff2dc;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Maanantai" GridPane.halignment="CENTER" />
+                              <Label text="Tiistai" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                              <Label text="Keskiviikko" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                              <Label text="Torstai" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                              <Label text="Perjantai" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="gridPane" alignment="CENTER" prefHeight="375.0" prefWidth="480.0" style="-fx-background-color: white; -fx-border-color: gray;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextArea prefHeight="200.0" prefWidth="200.0" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
                </children>
             </HBox>
          </children>
@@ -188,7 +163,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <TextArea opacity="0.52" prefHeight="449.0" prefWidth="164.0" style="-fx-font-size: 14;" wrapText="true">
+                  <TextArea fx:id="slotNotes" opacity="0.52" prefHeight="449.0" prefWidth="164.0" style="-fx-font-size: 14;" wrapText="true">
                      <VBox.margin>
                         <Insets right="20.0" />
                      </VBox.margin>
@@ -224,6 +199,7 @@
                <children>
                   <BorderPane />
                   <BorderPane />
+                  <Label fx:id="testlabel" prefHeight="17.0" prefWidth="502.0" />
                </children>
             </VBox>
          </children>
@@ -276,4 +252,7 @@
          </children>
       </VBox>
    </top>
+   <left>
+      <Pane prefHeight="200.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </left>
 </BorderPane>
