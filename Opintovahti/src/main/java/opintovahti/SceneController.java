@@ -81,7 +81,6 @@ public class SceneController implements Initializable {
     }
 
     //Periodia vaihdetaan ComboBox-elementistä löytyvillä vaihtoehdoilla
-    //
     
     @FXML
     public void comboBoxUpdate() throws Exception {
