@@ -2,7 +2,6 @@ package opintovahti;
 
 
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,7 +19,11 @@ public class MainApp extends Application {
     @Override
     public void start(final Stage stage) throws Exception {
         
+        //Luodaan State-objekti joka pitää kirjaa käyttäjästä ja avoinna olevasta periodista
+        
         State.globalState = new State();
+        
+        //Luodaan kirjautumisikkuna, jolla ei ole reunuksia ja jota voidaan liikutetella hiirellä vetämällä
         
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
         

@@ -1,6 +1,7 @@
 
 package opintovahti;
 
+import java.sql.SQLException;
 
 public class State {
     
@@ -8,10 +9,12 @@ public class State {
     
     private Integer currentUser;
     private Integer currentPeriod;
+
+    Databases db;
     
-    public State() {
-        
-    } 
+    public State() throws SQLException {
+        db = new Databases();
+    }
     
     public void setUserId(Integer userId) {
         this.currentUser = userId;
@@ -27,6 +30,10 @@ public class State {
     
     public Integer getPeriodId() {
         return this.currentPeriod;
+    }
+
+    public Databases getDatabase(){
+        return this.db;
     }
     
 }

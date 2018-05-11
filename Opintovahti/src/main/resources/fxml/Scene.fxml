@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -15,7 +14,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #245569;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opintovahti.SceneController">
@@ -72,7 +70,7 @@
                         </GridPane>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="450.0">
+                  <VBox alignment="CENTER" prefHeight="485.0" prefWidth="480.0">
                      <children>
                         <GridPane alignment="CENTER" prefHeight="75.0" prefWidth="480.0" style="-fx-background-color: #cff2dc;">
                           <columnConstraints>
@@ -109,31 +107,6 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <TextArea prefHeight="200.0" prefWidth="200.0" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                              <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
                            </children>
                         </GridPane>
                      </children>
@@ -163,7 +136,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <TextArea fx:id="slotNotes" opacity="0.52" prefHeight="449.0" prefWidth="164.0" style="-fx-font-size: 14;" wrapText="true">
+                  <TextArea fx:id="slotNotes" opacity="0.52" prefHeight="426.0" prefWidth="164.0" style="-fx-font-size: 14;" wrapText="true">
                      <VBox.margin>
                         <Insets right="20.0" />
                      </VBox.margin>
@@ -193,60 +166,39 @@
       </HBox>
    </right>
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox prefHeight="0.0" prefWidth="800.0">
-               <children>
-                  <BorderPane />
-                  <BorderPane />
-                  <Label fx:id="testlabel" prefHeight="17.0" prefWidth="502.0" />
-               </children>
-            </VBox>
-         </children>
-      </HBox>
+      <BorderPane>
+         <center>
+            <Label fx:id="loggedInLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="470.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </Label>
+         </center>
+      </BorderPane>
    </bottom>
    <top>
       <VBox prefHeight="50.0" prefWidth="804.0" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="30.0" prefWidth="407.0">
                <children>
-                  <HBox prefHeight="30.0" prefWidth="713.0">
-                     <children>
-                        <MenuBar prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #3487a9;">
-                          <menus>
-                            <Menu mnemonicParsing="false" text="Tiedosto">
-                              <items>
-                                <MenuItem mnemonicParsing="false" text="Tallenna" />
-                                    <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Sulje" />
-                              </items>
-                            </Menu>
-                            <Menu mnemonicParsing="false" text="Muokkaa">
-                              <items>
-                                <MenuItem mnemonicParsing="false" text="Asetukset" />
-                              </items>
-                            </Menu>
-                            <Menu mnemonicParsing="false" text="Ohje">
-                              <items>
-                                <MenuItem mnemonicParsing="false" text="Tietoa" />
-                              </items>
-                            </Menu>
-                          </menus>
-                           <padding>
-                              <Insets top="3.0" />
-                           </padding>
-                        </MenuBar>
-                        <BorderPane prefWidth="506.0">
-                           <center>
-                              <Rectangle fill="#3487a9" height="30.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="493.0" />
-                           </center>
-                        </BorderPane>
-                     </children>
-                  </HBox>
-                  <JFXButton prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #3487a9;" text="tänne vielä buttonit" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets left="2.0" />
-                     </HBox.margin>
-                  </JFXButton>
+                  <MenuBar prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #3487a9;">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Tiedosto">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Sulje" />
+                        </items>
+                      </Menu>
+                    </menus>
+                     <padding>
+                        <Insets top="3.0" />
+                     </padding>
+                  </MenuBar>
                </children>
             </HBox>
          </children>

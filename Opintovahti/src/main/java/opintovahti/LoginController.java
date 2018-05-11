@@ -1,10 +1,10 @@
 package opintovahti;
 
 
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -16,7 +16,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import org.mindrot.jbcrypt.BCrypt;
 
 
 public class LoginController implements Initializable {
@@ -32,13 +31,15 @@ public class LoginController implements Initializable {
     
     @FXML
     private Label signupLabel;
-    
-    
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
+
     }
 
+    // Luo uuden lukujärjestys-UI:n
+    
     @FXML
     public void newTimetableScene(ActionEvent event) throws Exception {
         
@@ -72,13 +73,15 @@ public class LoginController implements Initializable {
     
     @FXML
     public void newUserCreated(ActionEvent event) throws Exception {
+        Databases db = State.globalState.getDatabase();
+
         String username = this.txtUsr.getText();
         String password = this.txtPswd.getText();
 
-        if(!Databases.checkIfUserExists(username)) {
-            Databases.createUser(username, Passwords.hash(password));
+        if(!db.checkIfUserExists(username)) {
+            db.createUser(username, Passwords.hash(password));
             
-            Integer id = Databases.getUserId(username);
+            Integer id = db.getUserId(username);
             State.globalState.setUserId(id);
             State.globalState.setPeriodId(1);
             
@@ -90,16 +93,18 @@ public class LoginController implements Initializable {
     
     @FXML
     public void login(ActionEvent event) throws Exception {
+        Databases db = State.globalState.getDatabase();
+
         String LoginUsername = this.txtUsr.getText();
         String loginPassword = this.txtPswd.getText();
 
-        if (Databases.checkIfUserExists(LoginUsername)) {
-            String hash = Databases.getHash(LoginUsername);
+        if (db.checkIfUserExists(LoginUsername)) {
+            String hash = db.getHash(LoginUsername);
             
-            if (BCrypt.checkpw(loginPassword, hash)) {
+            if (Passwords.checkPw(loginPassword, hash)) {
                 
-                Integer userId = Databases.getUserId(LoginUsername);
-                Integer periodId = Databases.checkCurrentPeriod(userId);
+                Integer userId = db.getUserId(LoginUsername);
+                Integer periodId = db.checkCurrentPeriod(userId);
                 
                 State.globalState.setUserId(userId);
                 State.globalState.setPeriodId(periodId);
