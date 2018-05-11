@@ -9,3 +9,4 @@
 | 2.-3.5. | 12 | uusi käyttäjä tallennetaan nyt databaseen, salasana hashataan ja siihen lisätään salt |
 | 4.5.  | 5    | tietokantatoiminnallisuuden parantamista |
 | 4.5.  | 6    | salasanakryptauksen vaihto bcryptiin, kirjautuminen valmis kokonaisuudessaan |
+| 8.-11.5.| ?  | Viimeistely usean päivän aikana, unta saatu n. 4-5 tuntia per yö. Tarkkaa tuntimäärää ei tiedossa. Suurin ongelma saada State säilymään Scenejen välillä, lopulta tyytyminen globaaliin Stateen. Tämän jälkeen toteutettiin lukujärjestykseen ja muistiinpanoihin tallentaminen ja lataaminen ja viimeisteltiin UI, sekä luotiin jar-tiedosto ja niin paljon dokumentaatiota kuin aikaa riitti |
